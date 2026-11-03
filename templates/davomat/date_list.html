@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Davomat sanalari</title>
+</head>
+<body>
+
+            {% for date in dates %}
+        <p>
+            <a href="{% url 'date_with_course' date.course.id %}">{{ date }}</a>
+        </p>
+    {% empty %}
+        <p>Hozircha sanalar mavjud emas.</p>
+    {% endfor %}
+</body>
+</html>
